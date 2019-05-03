@@ -15,17 +15,20 @@
 
 We need to perform 3x3 convolution 99 times on the input image of size 199x199 to make it 1x1. ie, we need to have 99 hidden layers between input and output layers.
 
-Calculation:
+## Calculation:
 
-Input = 199,
+**Input = 199
 
-Output = 1,
+**Output = 1
 
-Filter Size = 3
+**Filter Size = 3
 
-No of layer required = (Input-Output)/(Filter_Size-1)
-                     = (199-1)/(3-1)
-                     = 198/2
-                     = 99
+**No of layer required = (Input-Output)/(Filter_Size-1)
+
+                       = (199-1)/(3-1)
+                     
+                       = 198/2
+                     
+                       = 99
                      
 
