@@ -10,6 +10,8 @@
 
 # Why should we only (well mostly) use 3x3 Kernels?
 
+1.  3x3 kernels are least number of parameters [9 Parameters]
+2.  3x3 kernels are accelerated on GPUs and TPUs 
 
 # How many times do we need to perform 3x3 convolution operation to reach 1x1 from 199x199 ?
 
