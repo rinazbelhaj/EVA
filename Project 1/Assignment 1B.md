@@ -17,8 +17,10 @@ We need to perform 3x3 convolution 99 times on the input image of size 199x199 t
 
 Calculation:
 
-Input = 199
-Output = 1
+Input = 199,
+
+Output = 1,
+
 Filter Size = 3
 
 No of layer required = (Input-Output)/(Filter_Size-1)
