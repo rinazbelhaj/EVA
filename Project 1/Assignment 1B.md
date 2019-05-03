@@ -12,3 +12,18 @@
 
 
 # How many times do we need to perform 3x3 convolution operation to reach 1x1 from 199x199 ?
+
+We need to perform 3x3 convolution 99 times on the input image of size 199x199 to make it 1x1. ie, we need to have 99 hidden layers between input and output layers.
+
+Calculation:
+
+Input = 199
+Output = 1
+Filter Size = 3
+
+No of layer required = (Input-Output)/(Filter_Size-1)
+                     = (199-1)/(3-1)
+                     = 198/2
+                     = 99
+                     
+
