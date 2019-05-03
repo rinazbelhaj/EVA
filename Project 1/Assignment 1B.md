@@ -5,6 +5,10 @@
 
 ![alt+text](https://github.com/rinazbelhaj/EIP/blob/master/kernel.png?raw=true "Kernel")
 
+## Channels:
+**Channels** are features extracted by convolving **kernels** over an input image. Number of channels or features extracted equals the number of kernels used. More number of features extracted will help us in identifying images accurately. The channels are kept separate to avoid loss of information. Each channel carries specific set of information that will be merged together in final layers of neural network to correctly understand an image.
+
 # Why should we only (well mostly) use 3x3 Kernels?
+
 
 # How many times do we need to perform 3x3 convolution operation to reach 1x1 from 199x199 ?
