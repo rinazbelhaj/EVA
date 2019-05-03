@@ -35,8 +35,8 @@ We need to perform 3x3 convolution 99 times on the input image of size 199x199 t
                      
 ## Steps:
 
-<pre>Layer : 1     Input Size : 199 x 199 ---> Convolution : 3 x 3 ---> Output : 197 x 197</pre>
-<pre>Layer : 2     Input Size : 197 x 197 ---> Convolution : 3 x 3 ---> Output : 195 x 195</pre>
+<pre>Layer : 1     Input Size : 199 x 199 ---> Convolution : 3 x 3 ---> Output : 197 x 197
+<pre>Layer : 2     Input Size : 197 x 197 ---> Convolution : 3 x 3 ---> Output : 195 x 195
 <pre>Layer : 3     Input Size : 195 x 195 ---> Convolution : 3 x 3 ---> Output : 193 x 193</pre>
 <pre>Layer : 4     Input Size : 193 x 193 ---> Convolution : 3 x 3 ---> Output : 191 x 191</pre>
 <pre>Layer : 5     Input Size : 191 x 191 ---> Convolution : 3 x 3 ---> Output : 189 x 189</pre>
