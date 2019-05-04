@@ -10,8 +10,12 @@
 
 # Why should we only (well mostly) use 3x3 Kernels?
 
-1.  3x3 kernels are least number of parameters [9 Parameters]
-2.  3x3 kernels are accelerated on GPUs and TPUs 
+1.  3x3 kernels are least number of parameters [9 Parameters]</br>
+    3x3 kernels are the smallest possible kernel that can detect patterns in an image. This has 9 parameters which need to be optmized       while training. Any higher order filter can be represented as a multiple of 3x3 filters thereby reducing the parameters.</br>
+    Eg : 5x5 filter can be represented as a series of two 3x3 filters. </br>
+    5x5 filter : 25 parameters </br>
+    3x3 filter x 2 : 9 x 2 = 18 parameters </br>
+2.  3x3 kernels are accelerated on GPUs and TPUs </br>
 
 # How many times do we need to perform 3x3 convolution operation to reach 1x1 from 199x199 ?
 
