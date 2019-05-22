@@ -38,6 +38,17 @@ It is common to periodically insert a max Pooling layer in-between successive Co
 
 ![alt+text](https://github.com/rinazbelhaj/EVA/blob/master/Images/image.png?raw=true "3x3 Convolution")
 
+### Position of MaxPooling layer:
+Since max pooling layer does a discretization to abstract the image, it is very important to decide on the position of pooling layer in the network so that we are loosing minimum information.
+
+1.  **Distance of the pooling layer from input**</br>
+The max pooling layer should not be used close to the input layer. This is because the receptive field in initial few layers will be very small to generate any edges or gradients and therefore max pooling won't be able to pick out any relevant features from those layers.
+
+Eg: In MNIST data, the first three layers with 3x3 kernels will have a receptive field of 7x7. Before the third layer, the receptive field will be too low for kernel to identify any edges or gradients. Hence, there is no point of applying max pooling before the third layer.
+
+2.  **Distance of the pooling layer from output**</br>
+The max pooling layer should not be used close to the output layer. This is because towards the last few layers, the kernels would have learned important features or parts of objects that will be essential for the classification process. Max pooling here will distort those features by throwing off some information and thereby affect the discriminating power of the network.
+
 ## When do we stop convolutions and go ahead with a larger kernel or some other alternative (
 
 ## 4. How many layers:
