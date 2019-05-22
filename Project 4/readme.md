@@ -18,6 +18,10 @@ Once we have finalized on the receptive field requirement, then the next task is
 
 ### Why should we mostly use 3x3 Kernels?
 
+3x3 Convolution** is a type of **filter/kernel** used in **deep CNNs**. It is basically a matrix of size **3x3xinput_channel** convolved over the previous input layers. 
+
+![alt+text](https://github.com/rinazbelhaj/EIP/blob/master/3x3%20Convolution.png?raw=true "3x3 Convolution")
+
 1.  **3x3 kernels have least number of parameters [9 Parameters]**</br>
     3x3 kernels are the smallest possible kernel that can detect patterns in an image. This has 9 parameters which need to be optmized       while training. Any higher order filter can be represented as a multiple of 3x3 filters thereby reducing the parameters. Fewer           parameters result in the network to  be trained faster.</br>
     
