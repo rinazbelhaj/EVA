@@ -20,7 +20,7 @@ Once we have finalized on the receptive field requirement, then the next task is
 
 3x3 Convolution** is a type of **filter/kernel** used in **deep CNNs**. It is basically a matrix of size **3x3xinput_channel** convolved over the previous input layers. 
 
-![alt+text](https://github.com/rinazbelhaj/EIP/blob/master/3x3%20Convolution.png?raw=true "3x3 Convolution")
+![alt+text](https://github.com/rinazbelhaj/EVA/blob/master/Images/3x3%20Convolution.png?raw=true "3x3 Convolution")
 
 1.  **3x3 kernels have least number of parameters [9 Parameters]**</br>
     3x3 kernels are the smallest possible kernel that can detect patterns in an image. This has 9 parameters which need to be optmized       while training. Any higher order filter can be represented as a multiple of 3x3 filters thereby reducing the parameters. Fewer           parameters result in the network to  be trained faster.</br>
@@ -32,6 +32,11 @@ Once we have finalized on the receptive field requirement, then the next task is
     Since most of the researchers and companies using CNNs use 3x3 filter, hardware manufacturers have optimized their GPUs and TPUs to     perform faster operations on these filters. This resulted in more and more people using 3x3 filter more.
 
 ## 3. MaxPooling :
+**Max pooling** is a sample-based discretization process. The objective is to down-sample an input representation, reducing its dimensionality and allowing for assumptions to be made about features contained in the sub-regions binned. Max pooling is done by applying a max filter to (usually) non-overlapping subregions of the initial representation.
+
+It is common to periodically insert a max Pooling layer in-between successive Conv layers in a ConvNet architecture. Its function is to progressively reduce the spatial size of the representation to reduce the amount of parameters and computation in the network, and hence to also control overfitting. The Pooling Layer operates independently on every depth slice of the input and resizes it spatially, using the MAX operation. The most common form is a pooling layer with filters of size 2x2 applied with a stride of 2 downsamples every depth slice in the input by 2 along both width and height, discarding 75% of the activations. 
+
+![alt+text](https://github.com/rinazbelhaj/EVA/blob/master/Images/image.png?raw=true "3x3 Convolution")
 
 ## When do we stop convolutions and go ahead with a larger kernel or some other alternative (
 
