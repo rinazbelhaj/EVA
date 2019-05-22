@@ -14,7 +14,18 @@ The first and foremost thing in designing a convolutional neural network is to u
 Eg: Let's say we are doing an image classification problem on MNIST data with image sizes of 28x28. So ideally, we need to have a receptive field of 28x28. But if you closely examine the images, we can see that the numbers in the images are not of full size. The edges of the images have blank spaces which is irrelevant for correctly identifying the label of the image. By further analysis, we can see that the receptive field required for this problem would around 23x23.
 
 ## 2. Convolution Size :
-Once we have finalized on the receptive field requirement, then the next task is to decide on the convolutional filter size. **Filters** are used in image processing for blurring, sharpening, embossing, edge detection and more. In the initial layers of CNN, filters, when convolved across an image, captures low-level features like vertical, horizontal and diagonal edges. Filter in the subsequent layers will be able to detect abstract and complex features. Each filter is a matrix of numbers corresponding to a feature that the filter is looking for. They can be any sizes like **1x1, 3x3, 5x5, 7x7, 11x11** etc. Usually, we don't use even sized filter since they don't have an axis of symmetry and hence less useful in extracting features.
+Once we have finalized on the receptive field requirement, then the next task is to decide on the convolutional filter size. **Filters**  or **kernels** are used in image processing for blurring, sharpening, embossing, edge detection and more. In the initial layers of CNN, filters, when convolved across an image, captures low-level features like vertical, horizontal and diagonal edges. Filter in the subsequent layers will be able to detect abstract and complex features. Each filter is a matrix of numbers corresponding to a feature that the filter is looking for. They can be any sizes like **1x1, 3x3, 5x5, 7x7, 11x11** etc. Usually, we don't use even sized filter since they don't have an axis of symmetry and hence less useful in extracting features. We mostly use 3x3 filters when designing the network due to the following advantages of 3x3 over others.
+
+### Why should we mostly use 3x3 Kernels?
+
+1.  **3x3 kernels are least number of parameters [9 Parameters]**</br>
+    3x3 kernels are the smallest possible kernel that can detect patterns in an image. This has 9 parameters which need to be optmized       while training. Any higher order filter can be represented as a multiple of 3x3 filters thereby reducing the parameters. Fewer           parameters result in the network to  be trained faster.</br>
+    
+    Eg : 5x5 filter can be represented as a series of two 3x3 filters. </br>
+    5x5 filter : 25 parameters </br>
+    3x3 filter x 2 : 9 x 2 = 18 parameters </br>
+2.  **3x3 kernels are accelerated on GPUs and TPUs** </br>
+    Since most of the researchers and companies using CNNs use 3x3 filter, hardware manufacturers have optimized their GPUs and TPUs to     perform faster operations on these filters. This resulted in more and more people using 3x3 filter more.
 
 ## 3. MaxPooling :
 
