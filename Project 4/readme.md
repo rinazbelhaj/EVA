@@ -59,17 +59,17 @@ Once we have finalized on the receptive field requirement, convolution size to b
 Number of kernels should be decided based on the following factors
 
 1.  Complexity of the task:
-    Kernels  are feature extractors of CNN. So we need to use as many kernels as the number of features we expect to extract from an image.
-    
-
+    Kernels  are feature extractors of CNN. So we need to use as many kernels as the number of features we expect to extract from an image. For simple problems like MNIST, we might not need many features, hence we can go with lesser number of kernels. But for complex problems like image net challenge or similar tasks with naturaal images, we might need much more number of kernels to extract those many features.
 2.  Accuracy requirement:
-
+    A network with a larger number of kernels will be easily able to generate features that are required to correctly classify an image. Because of this reason, for the same deep learning task, training accuracy of the model with larger number of kernel will always be high. So use cases where high accuracy is required, we might have to go ahead with larger number of kernels
 3.  Parameter constrains:
+    The number of parameters and the size of the network will increase exponentially with increase in number of kernels. Hence for use cases where real time inferencing is required, we need to reduce the number of kernels so that frames per second on inferencing will be higher.
+
+## 7. SoftMax Function:
+The final layer of the network maps the features to the output label. So we need to convert this output into a probabilty like function which predicts the label for a given input. This is acheived through softmax function.
 
 
 ## 1x1 Convolutions,
-
-## SoftMax,
 
 ## Image Normalization,
 
