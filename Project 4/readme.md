@@ -49,18 +49,23 @@ Eg: In MNIST data, the first three layers with 3x3 kernels will have a receptive
 2.  **Distance of the pooling layer from output**</br>
 The max pooling layer should not be used close to the output layer. This is because towards the last few layers, the kernels would have learned important features or parts of objects that will be essential for the classification process. Max pooling here will distort those features by throwing off some information and thereby affect the discriminating power of the network.
 
-## When do we stop convolutions and go ahead with a larger kernel or some other alternative (
+## 4. When to stop convolutions and go ahead with a larger kernel or some other alternative
+If the receptive field requirement is satisfied even before the output size nears 1x1, then there is no point of convolving further. In such cases, we usually use global average pooling to reduce the output size to 1x1. We could have used a larger kernel to achieve the same, but then it would add huge number of parameters to the network.
 
-## 4. How many layers:
+## 5. How many layers:
+Once we have finalized on the receptive field requirement, convolution size to be used & padding strategy, the number of layers required is a straight forward calculation. We need to have as many layer that are required to reach the receptive field with the given convolution size.
 
-## 5. Position of MaxPooling :
-The distance of MaxPooling from Prediction
+## 6. How many kernels:
+Number of kernels should be decided based on the following factors
 
-## 6. Concept of Transition Layers : 
+1.  Complexity of the task:
+    Kernels  are feature extractors of CNN. So we need to use as many kernels as the number of features we expect to extract from an image.
+    
 
-## 7. Position of Transition Layer :
+2.  Accuracy requirement:
 
-## 8. Kernels and how do we decide the number of kernels?
+3.  Parameter constrains:
+
 
 ## 1x1 Convolutions,
 
@@ -71,6 +76,10 @@ The distance of MaxPooling from Prediction
 ## Batch Size, and effects of batch size
 
 ## Adam vs SGD
+
+## 6. Concept of Transition Layers : 
+
+## 7. Position of Transition Layer :
 
 ## Learning Rate,
 
