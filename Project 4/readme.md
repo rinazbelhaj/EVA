@@ -66,35 +66,29 @@ Number of kernels should be decided based on the following factors
     The number of parameters and the size of the network will increase exponentially with increase in number of kernels. Hence for use cases where real time inferencing is required, we need to reduce the number of kernels so that frames per second on inferencing will be higher.
 
 ## 7. SoftMax Function:
-The final layer of the network maps the features to the output label. So we need to convert this output into a probabilty like function which predicts the label for a given input. This is acheived through softmax function.
+The final layer of the network maps the features to the output label. So we need to convert this output into a probabilty like function which predicts the label for a given input. This is achieved through softmax function.
 
+## 8. Model Optimizer:
+Model optimizer decides the variation of gradient descent algorithm to be used in the training process. Depending on the optimizer used, the model can give different results
 
-## 1x1 Convolutions,
+## 9. Batch Size:
+Deciding on the batch size is very critical to achieve good results from our model. Batch size defines the number of training samples the algorithm sees at a time before updating the weights. Larger batch size will result in faster training but it also leads to poor generalization error. On the flip side, smaller batch size will take longer to train but the model will perform better on test data. The reason for better generalization is vaguely attributed to the existence to noise in small batch size training. Because neural network systems are extremely prone to overfitting, the idea is that seeing many small batch size, each batch being a noisy representation of the entire dataset, will cause a sort of “tug-and-pull” dynamic. This “tug-and-pull” dynamic prevents the neural network from overfitting on the training set and hence results in better performance on the test set. The minimum batch size should be always more than the number of distinct output labels. Batch size should always be in the power of 2 to fully utilize the hardware infrastructure.
 
-## Image Normalization,
+## 10. Learning Rate:
 
-## Batch Size, and effects of batch size
+## 11. Number of Epochs:
 
-## Adam vs SGD
+## 12. Validation Checks:
+How do we know our network is not going well, comparatively, very early
 
-## 6. Concept of Transition Layers : 
+## 13. 1x1 Convolutions:
 
-## 7. Position of Transition Layer :
+## 14. Image Normalization:
 
-## Learning Rate,
+## 15. DropOut:
 
-## When to add validation checks
+## 16. Batch Normalization:
+The distance of Batch Normalization from Prediction,
 
-## Number of Epochs and when to increase them,
-
-## How do we know our network is not going well, comparatively, very early
-
-## When do we introduce DropOut, or when do we know we have some overfitting
-
-## DropOut
-
-## 9. Batch Normalization,
-
-## The distance of Batch Normalization from Prediction,
-
-## LR schedule and concept behind it
+## 17. LR Schedule: 
+and concept behind it
