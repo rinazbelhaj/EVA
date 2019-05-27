@@ -75,6 +75,7 @@ Model optimizer decides the variation of gradient descent algorithm to be used i
 Deciding on the batch size is very critical to achieve good results from our model. Batch size defines the number of training samples the algorithm sees at a time before updating the weights. Larger batch size will result in faster training but it also leads to poor generalization error. On the flip side, smaller batch size will take longer to train but the model will perform better on test data. The reason for better generalization is vaguely attributed to the existence to noise in small batch size training. Because neural network systems are extremely prone to overfitting, the idea is that seeing many small batch size, each batch being a noisy representation of the entire dataset, will cause a sort of “tug-and-pull” dynamic. This “tug-and-pull” dynamic prevents the neural network from overfitting on the training set and hence results in better performance on the test set. The minimum batch size should be always more than the number of distinct output labels. Batch size should always be in the power of 2 to fully utilize the hardware infrastructure.
 
 ## 10. Learning Rate:
+Learning rate is yet another major parameter in designing the neural network which decides how fast we reach the optima. Larger learning rate will lead to faster optimization whereas too large a learning rate can result in model divergence. Learning rate if kept very low will lead to a large training time.
 
 ## 11. Number of Epochs:
 **Epoch** is an important hyperparameter in deep learning. One epoch is when an entire training dataset is passed forward and backward through the neural network only once. Training a neural network is an iterative process involving multiple epochs. Weights in network gets updated with each epoch if we use the entire dataset as a batch. Each epoch can contain more than one batch if the training data is too big to fit in memory. The number of epochs are usually decided by looking at the **learning curve** and the identifying the point of divergence of training and test error.
@@ -82,7 +83,7 @@ Deciding on the batch size is very critical to achieve good results from our mod
 <img src="https://github.com/rinazbelhaj/EIP/blob/master/Epoch.png?raw=true" style="zoom:30%" />
 
 ## 12. Validation Checks:
-How do we know our network is not going well, comparatively, very early
+Validation checks at each epoch is necessary to identify the point at which the network starts overfitting. If the validational accuracy plateaus out and training accuracy further starts increasing, then it is a clear sign of overfitting.
 
 ## 13. 1x1 Convolutions:
 1x1 Convolution** is a type of **filter/kernel** used in **deep CNNs**. It is basically a matrix of size **1x1xinput_channel** convolved over the previous input layers. These filters are used for dimensionality reduction of channels by using **feature pooling** technique without affecting image dimension. The number of output channels can be controlled by using that number of 1x1 filters. 1x1 filters reduces the dimension by selecting only important features across the channels. Sometimes, 1x1 filter are used to introduce extra non-linearity without reducing the dimension, eg: google inception module.
