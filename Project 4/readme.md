@@ -80,7 +80,6 @@ Learning rate is yet another major parameter in designing the neural network whi
 ## 11. Number of Epochs:
 **Epoch** is an important hyperparameter in deep learning. One epoch is when an entire training dataset is passed forward and backward through the neural network only once. Training a neural network is an iterative process involving multiple epochs. Weights in network gets updated with each epoch if we use the entire dataset as a batch. Each epoch can contain more than one batch if the training data is too big to fit in memory. The number of epochs are usually decided by looking at the **learning curve** and the identifying the point of divergence of training and test error.
 ![alt+text](https://github.com/rinazbelhaj/EIP/blob/master/Epoch.png?raw=true "Epochs")
-<img src="https://github.com/rinazbelhaj/EIP/blob/master/Epoch.png?raw=true" style="zoom:30%" />
 
 ## 12. Validation Checks:
 Validation checks at each epoch is necessary to identify the point at which the network starts overfitting. If the validational accuracy plateaus out and training accuracy further starts increasing, then it is a clear sign of overfitting.
