@@ -77,6 +77,9 @@ Deciding on the batch size is very critical to achieve good results from our mod
 ## 10. Learning Rate:
 
 ## 11. Number of Epochs:
+**Epoch** is an important hyperparameter in deep learning. One epoch is when an entire training dataset is passed forward and backward through the neural network only once. Training a neural network is an iterative process involving multiple epochs. Weights in network gets updated with each epoch if we use the entire dataset as a batch. Each epoch can contain more than one batch if the training data is too big to fit in memory. The number of epochs are usually decided by looking at the **learning curve** and the identifying the point of divergence of training and test error.
+
+<img src="https://github.com/rinazbelhaj/EIP/blob/master/Epoch.png?raw=true" style="zoom:30%" />
 
 ## 12. Validation Checks:
 How do we know our network is not going well, comparatively, very early
