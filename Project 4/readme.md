@@ -78,14 +78,16 @@ Deciding on the batch size is very critical to achieve good results from our mod
 
 ## 11. Number of Epochs:
 **Epoch** is an important hyperparameter in deep learning. One epoch is when an entire training dataset is passed forward and backward through the neural network only once. Training a neural network is an iterative process involving multiple epochs. Weights in network gets updated with each epoch if we use the entire dataset as a batch. Each epoch can contain more than one batch if the training data is too big to fit in memory. The number of epochs are usually decided by looking at the **learning curve** and the identifying the point of divergence of training and test error.
-
+![alt+text](https://github.com/rinazbelhaj/EIP/blob/master/Epoch.png?raw=true "Epochs")
 <img src="https://github.com/rinazbelhaj/EIP/blob/master/Epoch.png?raw=true" style="zoom:30%" />
 
 ## 12. Validation Checks:
 How do we know our network is not going well, comparatively, very early
 
 ## 13. 1x1 Convolutions:
+1x1 Convolution** is a type of **filter/kernel** used in **deep CNNs**. It is basically a matrix of size **1x1xinput_channel** convolved over the previous input layers. These filters are used for dimensionality reduction of channels by using **feature pooling** technique without affecting image dimension. The number of output channels can be controlled by using that number of 1x1 filters. 1x1 filters reduces the dimension by selecting only important features across the channels. Sometimes, 1x1 filter are used to introduce extra non-linearity without reducing the dimension, eg: google inception module.
 
+![alt+text](https://github.com/rinazbelhaj/EIP/blob/master/1x1%20Convolution.png?raw=true "1x1 Convolution")
 ## 14. Image Normalization:
 
 ## 15. DropOut:
