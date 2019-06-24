@@ -11,4 +11,6 @@ Receptive field at each output are :
 2. Softmax1 - 427
 3. Softmax2 - 907
 
+![alt+text](https://github.com/rinazbelhaj/EVA/blob/master/Images/RF%20Calculation.PNG?raw=true "Formula")
+
 ![alt+text](https://github.com/rinazbelhaj/EVA/blob/master/Images/Network.png?raw=true "Formula")
