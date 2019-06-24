@@ -6,4 +6,9 @@ Check this paper out: https://arxiv.org/pdf/1409.4842.pdf (Links to an external 
 
 ## Calculations
 
+Receptive field at each output are :
+1. Softmax0 - 235
+2. Softmax1 - 427
+3. Softmax2 - 907
+
 ![alt+text](https://github.com/rinazbelhaj/EVA/blob/master/Images/Network.png?raw=true "Formula")
